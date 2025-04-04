@@ -9,7 +9,7 @@ interface CarModelProps {
 
 export function CarModel({ modelPath }: CarModelProps) {
   const group = useRef<THREE.Group>(null)
-  const [isUserInteracting, setIsUserInteracting] = useState(false)
+  const [shouldRotate, setShouldRotate] = useState(true)
   const { scene } = useGLTF(modelPath)
   
   // Clone the scene to avoid sharing materials between instances
@@ -30,9 +30,9 @@ export function CarModel({ modelPath }: CarModelProps) {
     }
   })
 
-  // Add rotation animation only when user is not interacting
+  // Add rotation animation only when shouldRotate is true
   useFrame(() => {
-    if (group.current && !isUserInteracting) {
+    if (group.current && shouldRotate) {
       // Auto-rotation - reduced speed for more elegant movement
       group.current.rotation.y += 0.002
     }
@@ -44,9 +44,9 @@ export function CarModel({ modelPath }: CarModelProps) {
         ref={group} 
         position={[0, 0, 0]} 
         scale={[0.6, 0.6, 0.6]}
-        onPointerDown={() => setIsUserInteracting(true)}
-        onPointerUp={() => setIsUserInteracting(false)}
-        onPointerLeave={() => setIsUserInteracting(false)}
+        onPointerDown={() => setShouldRotate(false)}
+        onPointerUp={() => {}}
+        onPointerLeave={() => {}}
       >
         <primitive object={clonedScene} />
       </group>

@@ -27,10 +27,10 @@ function App() {
           <div className="flex items-center justify-between py-4">
             {/* Logo */}
             <div className="flex items-center space-x-2">
-              <div className="w-10 h-10 bg-red-600 rounded-full flex items-center justify-center">
-                <span className="text-white font-bold text-xl">CS</span>
+              <div className="w-10 h-10 bg-gradient-to-br from-gray-800 to-gray-900 border border-gray-700 rounded-full flex items-center justify-center shadow-lg">
+                <span className="text-gray-300 font-bold text-xl">CS</span>
               </div>
-              <span className="text-white text-xl font-bold">CarShow</span>
+              <span className="text-gray-300 text-xl font-bold">CarShow</span>
             </div>
 
             {/* Navigation */}
