@@ -2,19 +2,30 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+@layer base {
+  :root {
+    font-family: theme('fontFamily.sans');
+    line-height: 1.5;
+    font-weight: 400;
+  }
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  body {
+    @apply bg-garage-dark text-white m-0 min-w-[320px] min-h-screen;
+  }
+}
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@layer components {
+  .garage-window {
+    @apply h-[100px] relative overflow-hidden;
+    background: linear-gradient(180deg, theme('colors.window-glow') 0%, theme('colors.garage-dark') 100%);
+  }
+
+  .garage-window::before {
+    @apply absolute top-0 left-0 right-0 h-0.5;
+    content: '';
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+  }
 }
 
 a {
@@ -24,14 +35,6 @@ a {
 }
 a:hover {
   color: #535bf2;
-}
-
-body {
-  margin: 0;
-  min-width: 320px;
-  min-height: 100vh;
-  background-color: theme('colors.garage-dark');
-  color: white;
 }
 
 h1 {
@@ -69,22 +72,4 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
-}
-
-.garage-window {
-  background: linear-gradient(180deg, theme('colors.window-glow') 0%, theme('colors.garage-dark') 100%);
-  height: 100px;
-  position: relative;
-  overflow: hidden;
-}
-
-.garage-window::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 2px;
-  background: rgba(255, 255, 255, 0.1);
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
 }
