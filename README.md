@@ -2,6 +2,7 @@
 
 A modern, interactive web application that showcases high-quality 3D car models in a sleek, dark-themed environment. Built with React, Three.js, and Tailwind CSS.
 
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-Click%20Here-blue)](https://car-show-cvq8.onrender.com/)
 ![CarShow Preview](public/preview.png)
 
 ## ✨ Features
@@ -33,7 +34,7 @@ A modern, interactive web application that showcases high-quality 3D car models 
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/car-show.git
+git clone https://github.com/rowell-camero/car-show.git
 cd car-show
 ```
 
@@ -106,4 +107,10 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
-Made with ❤️ by Rowell Camero
+## 📫 Connect with Me
+
+- 🌐 [Portfolio](https://rowell-camero-portfolio.onrender.com/)
+- 💼 [LinkedIn](https://linkedin.com/in/rowell-camero-67b868249)
+- 📧 Email: hdreamdev@gmail.com
+
+Made with ❤️ by [Rowell Camero](https://linkedin.com/in/rowell-camero-67b868249)
