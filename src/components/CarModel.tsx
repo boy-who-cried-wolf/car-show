@@ -33,8 +33,8 @@ export function CarModel({ modelPath }: CarModelProps) {
   // Add rotation animation only when user is not interacting
   useFrame(() => {
     if (group.current && !isUserInteracting) {
-      // Auto-rotation
-      group.current.rotation.y += 0.005
+      // Auto-rotation - reduced speed for more elegant movement
+      group.current.rotation.y += 0.002
     }
   })
 
